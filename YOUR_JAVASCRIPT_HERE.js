@@ -11,7 +11,6 @@ const hero = {
     }
 }
 
-
 function rest(person) {
     if (hero.health === 10) {
         alert('the health property already has the value 10')      //' + ${person} + ' 
@@ -25,11 +24,11 @@ function resetTheHealthProperty() {
     hero.health = 10
 }
 
-// adding in the inventory array to the `type`: `dagger` and `damage`: 2
+// adding the weapon obj as a last element in the inventory array {`type`: `dagger`, `damage`: 2}
 function clickOnDagger(params) {
-    hero.inventory.push(hero.weapon)
-    hero.inventory[0].type = 'dagger'
-    hero.inventory[0].damage = 2
+        hero.inventory.push(hero.weapon)
+        hero.inventory[0].type = 'dagger'
+        hero.inventory[0].damage = 2    
 }
 
 function pickUpItem(person, weapon) {
@@ -37,14 +36,14 @@ function pickUpItem(person, weapon) {
 
 }
 
-function clickOnBag(params) {
+function clickOnBag(person) {
     hero.inventory[0].type = 'dagger'
     hero.inventory[0].damage = 2
 
 }
 
 function equipWeapon(person) {
-    hero.inventory.push(hero.weapon)
+    hero.inventory[0] = hero.inventory.push(hero.weapon)
 }
 
 function checkLeaks(params) {
